@@ -8,7 +8,7 @@ const colors = {
   }
   
   const relativeColors = {
-    primary: colors.white,
+    primary: colors.black,
   }
   
   export default {
