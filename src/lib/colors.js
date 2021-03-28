@@ -5,10 +5,11 @@ const colors = {
     gray: '#dedede',
     red: '#E74C3C',
     violet: 'C71585',
+    blue: '#07c'
   }
   
   const relativeColors = {
-    primary: colors.black,
+    primary: colors.blue,
   }
   
   export default {
