@@ -36,6 +36,7 @@ const Layout = ({ children }) => {
             variant: 'styles.navlink',
             fontFamily: 'Transformers',
             fontSize: 3,
+            textTransform: 'uppercase',
             letterSpacing: '0.1em',
             fontWeight: 'bold',
             color: 'inherit',
