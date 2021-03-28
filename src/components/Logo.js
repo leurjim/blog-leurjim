@@ -21,8 +21,8 @@ const Logo = () => {
         alt="Logo leurjim"
         placeholder="blurred"
         layout="fixed"
-        width={80}
-        height={65}
+        width={65}
+        height={50}
       />
     </div>
   )
