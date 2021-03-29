@@ -17,6 +17,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^10.0.27",
     "@emotion/styled-base": "^10.0.31",
@@ -43,6 +44,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
+    "react-spinners": "^0.10.6",
     "styled-components": "^5.2.1",
     "theme-ui": "^0.4.0-alpha.3",
     "use-dark-mode": "^2.3.1"
