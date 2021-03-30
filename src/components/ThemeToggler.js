@@ -21,8 +21,25 @@ const ThemeToggler = () => {
       }}
       onClick={(e) => {
         setColorMode(colorMode === 'default' ? 'dark' : 'default')
-      }}>
-      {colorMode === 'default' ? <FiMoon /> : <FiSun />}
+      }}
+    >
+      {colorMode === 'default' ? (
+        <FiMoon 
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0',
+          }} />
+      ) : (
+        <FiSun
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0',
+          }} />
+      )}
     </Button>
   )
 }
