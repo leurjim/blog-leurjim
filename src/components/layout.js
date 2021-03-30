@@ -1,15 +1,11 @@
 /** @jsx jsx */
 import React from 'react'
-import { jsx, useColorMode, Styled } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import Button from './Button'
 import Logo from './Logo'
+import ThemeToggler from './ThemeToggler'
 
 const Layout = ({ children }) => {
-  const [colorMode, setColorMode] = useColorMode()
-
-  const newColorMode = colorMode === 'light' ? 'dark' : 'light'
   return (
     <Styled.root>
       <header
@@ -71,14 +67,8 @@ const Layout = ({ children }) => {
             },
           }}>
           Inicio
-        </Link>     
-        <Button
-          onClick={e => {
-            setColorMode(newColorMode)
-          }}
-        >
-          {newColorMode}
-        </Button>
+        </Link>  
+        <ThemeToggler />
       </header>
       <main
         sx={{
