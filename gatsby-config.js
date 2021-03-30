@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Blog personal",
-    description: "Blog Leurjim",
+    title: "Blog Leurjim",
+    description: "Blog Personal",
     twitter: "@leao_urbina",
     siteUrl: "https://twitter.com/leao_urbina"
   },
