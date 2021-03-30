@@ -2,6 +2,7 @@
 import React from 'react'
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
+import { bpMinSM, bpMinMD, bpMinLG} from '../lib/breakpoints'
 import Logo from './Logo'
 import ThemeToggler from './ThemeToggler'
 
@@ -67,8 +68,24 @@ const Layout = ({ children }) => {
             },
           }}>
           Inicio
-        </Link>  
-        <ThemeToggler />
+        </Link>
+        <div
+          css={{
+            display: 'flex',
+            marginTop: '20px',
+            [bpMinSM]: {
+              marginTop: '20px',
+            },
+            [bpMinMD]: {
+              marginTop: '30px',
+            },
+            [bpMinLG]: {
+              margin: '40px 0 0 20px',
+            },
+          }}
+        >  
+          <ThemeToggler />
+        </div>
       </header>
       <main
         sx={{
