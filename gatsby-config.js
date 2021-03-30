@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "Blog personal",
     description: "Blog Leurjim",
-    twitter: "myhandler",
-    siteUrl: "https://example.com"
+    twitter: "@leao_urbina",
+    siteUrl: "https://twitter.com/leao_urbina"
   },
   plugins: [
     `gatsby-plugin-styled-components`,
