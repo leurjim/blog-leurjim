@@ -3,7 +3,8 @@ module.exports = {
     title: "Blog Leurjim",
     description: "Blog Personal",
     twitter: "@leao_urbina",
-    siteUrl: "https://twitter.com/leao_urbina"
+    siteUrl: "https://twitter.com/leao_urbina",
+    image: "/images/logo-leurjim.png"
   },
   plugins: [
     `gatsby-plugin-styled-components`,

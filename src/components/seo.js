@@ -12,13 +12,14 @@ const SEO = ({ title, description, image, imageAlt, meta = [] }) => {
             title
             twitter
             siteUrl
+            image
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = image || site.siteMetadata.description
 
   const imageUrl = `${site.siteMetadata.siteUrl}${image}`
   return (
