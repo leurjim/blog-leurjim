@@ -1,10 +1,12 @@
 import React from 'react'
 import { useColorMode } from 'theme-ui'
 import { FiMoon, FiSun } from 'react-icons/fi'
+import { rgba } from 'polished'
 import Button from './Button'
+import colors from '../lib/colors'
 import { grayscale } from 'polished'
 
-const ThemeToggler = (props) => {
+const ThemeToggler = () => {
   const [colorMode, setColorMode] = useColorMode()
 
   return (
@@ -19,6 +21,14 @@ const ThemeToggler = (props) => {
         alignItems: 'center',
         justifyContent: 'center',
         margin: 0,
+        background: rgba(colors.black, 0.05),
+        color: colors.black,
+        '@media (hover: hover)': {
+          ':hover': {
+            color: colors.white,
+            background: colors.primary,
+          },
+        },
       }}
       onClick={(e) => {
         setColorMode(colorMode === 'default' ? 'dark' : 'default')
