@@ -10,15 +10,18 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     display: 'inline-flex',
     border: 'none',
     borderRadius: '4px',
-    background: secondary ? rgba(colors.primary, 0.2) : colors.primary,
-    color: secondary ? colors.primary : colors.white,
+    // background: secondary ? rgba(colors.primary, 0.2) : colors.primary,
+    background: rgba(colors.black, 0.05),
+    // color: secondary ? colors.primary : colors.white,
+    color: colors.black,
     padding: '10px 15px',
     cursor: 'pointer',
     transition: 'all 150ms ease',
     '@media (hover: hover)': {
       ':hover': {
         color: colors.white,
-        background: darken(0.1, colors.primary),
+        // background: darken(0.1, colors.primary),
+        background: colors.primary,
       },
     },
   })

@@ -4,7 +4,7 @@ import { FiMoon, FiSun } from 'react-icons/fi'
 import Button from './Button'
 import { grayscale } from 'polished'
 
-const ThemeToggler = () => {
+const ThemeToggler = (props) => {
   const [colorMode, setColorMode] = useColorMode()
 
   return (
@@ -31,7 +31,6 @@ const ThemeToggler = () => {
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0',
-            background: 'gray',
           }} />
       ) : (
         <FiSun
@@ -40,7 +39,6 @@ const ThemeToggler = () => {
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0',
-            background: 'yellow',
           }} />
       )}
     </Button>
