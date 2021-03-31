@@ -31,7 +31,7 @@ const ThemeToggler = () => {
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0',
-            bg: 'gray',
+            background: 'gray',
           }} />
       ) : (
         <FiSun
@@ -40,7 +40,7 @@ const ThemeToggler = () => {
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0',
-            bg: 'yellow',
+            background: 'yellow',
           }} />
       )}
     </Button>
