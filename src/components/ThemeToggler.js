@@ -51,6 +51,8 @@ const ThemeToggler = () => {
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0',
+            width: '1.25rem',
+            height: '1.25rem',
           }} />
       )}
     </Button>
