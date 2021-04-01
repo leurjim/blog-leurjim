@@ -41,7 +41,8 @@ const ThemeToggler = () => {
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0',
-            size: '5rem'
+            width: '2.375rem',
+            height: '2.375rem',
           }} />
       ) : (
         <FiSun
