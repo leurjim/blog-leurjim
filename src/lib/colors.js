@@ -6,7 +6,7 @@ const colors = {
     red: '#E74C3C',
     violet: 'C71585',
     blue: '#07c',
-    yellow: '#f7f2a6'
+    yellow: '#faf706'
   }
   
   const relativeColors = {
