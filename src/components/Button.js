@@ -17,7 +17,7 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     transition: 'all 150ms ease',
     '@media (hover: hover)': {
       ':hover': {
-        color: colors.white,
+        color: colors.yellow,
         background: darken(0.1, colors.primary),
       },
     },
