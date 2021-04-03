@@ -6,11 +6,11 @@ const colors = {
     red: '#E74C3C',
     violet: 'C71585',
     blue: '#07c',
-    yelow: 'f6e631'
+    yellow: 'f6e631'
   }
   
   const relativeColors = {
-    primary: colors.blue,
+    primary: colors.yellow,
   }
   
   export default {
