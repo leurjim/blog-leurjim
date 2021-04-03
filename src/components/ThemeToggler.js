@@ -21,14 +21,14 @@ const ThemeToggler = () => {
         alignItems: 'center',
         justifyContent: 'center',
         margin: 0,
-        background: rgba(colors.black, 0.05),
-        color: colors.black,
-        '@media (hover: hover)': {
-          ':hover': {
-            color: colors.white,
-            background: colors.primary,
-          },
-        },
+        // background: rgba(colors.black, 0.05),
+        // color: colors.black,
+        // '@media (hover: hover)': {
+        //   ':hover': {
+        //     color: colors.white,
+        //     background: colors.primary,
+        //   },
+        // },
       }}
       onClick={(e) => {
         setColorMode(colorMode === 'default' ? 'dark' : 'default')

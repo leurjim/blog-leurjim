@@ -15,12 +15,12 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     padding: '10px 15px',
     cursor: 'pointer',
     transition: 'all 150ms ease',
-    // '@media (hover: hover)': {
-    //   ':hover': {
-    //     color: colors.white,
-    //     background: darken(0.1, colors.primary),
-    //   },
-    // },
+    '@media (hover: hover)': {
+      ':hover': {
+        color: colors.white,
+        background: darken(0.1, colors.primary),
+      },
+    },
   })
   return to ? (
     <Link to={to} css={styles} {...restProps}>
