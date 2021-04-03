@@ -10,7 +10,7 @@ const colors = {
   }
   
   const relativeColors = {
-    primary: colors.blue,
+    primary: colors.yellow,
   }
   
   export default {
