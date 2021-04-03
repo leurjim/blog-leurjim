@@ -10,7 +10,7 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     display: 'inline-flex',
     border: 'none',
     borderRadius: '4px',
-    background: secondary ? rgba(colors.primary, 0.1) : colors.primary,
+    background: secondary ? rgba(colors.primary, 0.5) : colors.primary,
     color: secondary ? colors.primary : colors.white,
     padding: '10px 15px',
     cursor: 'pointer',
@@ -18,7 +18,7 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     '@media (hover: hover)': {
       ':hover': {
         color: colors.white,
-        background: darken(0.2, colors.primary),
+        background: darken(0.1, colors.primary),
       },
     },
   })
