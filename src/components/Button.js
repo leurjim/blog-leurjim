@@ -11,13 +11,13 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     border: 'none',
     borderRadius: '4px',
     background: secondary ? rgba(colors.primary, 0.2) : colors.primary,
-    color: secondary ? colors.primary : colors.white,
+    color: secondary ? colors.primary : colors.yellow,
     padding: '10px 15px',
     cursor: 'pointer',
     transition: 'all 150ms ease',
     '@media (hover: hover)': {
       ':hover': {
-        color: colors.yellow,
+        color: colors.white,
         background: darken(0.1, colors.primary),
       },
     },
