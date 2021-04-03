@@ -10,7 +10,7 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     display: 'inline-flex',
     border: 'none',
     borderRadius: '4px',
-    background: rgba(colors.black, 0.1),
+    background: rgba(colors.black, 0.05),
     color: colors.white,
     padding: '10px 15px',
     cursor: 'pointer',
