@@ -11,7 +11,7 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     border: 'none',
     borderRadius: '4px',
     background: rgba(colors.black, 0.05),
-    color: colors.white,
+    color: colors.primary,
     padding: '10px 15px',
     cursor: 'pointer',
     transition: 'all 150ms ease',
