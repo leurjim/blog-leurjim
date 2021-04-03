@@ -21,8 +21,8 @@ const ThemeToggler = () => {
         alignItems: 'center',
         justifyContent: 'center',
         margin: 0,
-        background: rgba(colors.white, 0.05),
-        color: colors.white,
+        background: rgba(colors.black, 0.05),
+        color: colors.black,
         '@media (hover: hover)': {
           ':hover': {
             color: colors.white,
