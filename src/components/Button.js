@@ -10,14 +10,14 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     display: 'inline-flex',
     border: 'none',
     borderRadius: '4px',
-    background: rgba(colors.black, 0.05),
-    color: colors.black,
+    background: rgba(colors.black, 0.5),
+    color: colors.white,
     padding: '10px 15px',
     cursor: 'pointer',
     transition: 'all 150ms ease',
     '@media (hover: hover)': {
       ':hover': {
-        color: colors.white,
+        color: colors.black,
         background: darken(0.1, colors.primary),
       },
     },
