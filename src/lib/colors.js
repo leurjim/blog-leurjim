@@ -5,7 +5,8 @@ const colors = {
     gray: '#dedede',
     red: '#E74C3C',
     violet: 'C71585',
-    blue: '#07c'
+    blue: '#07c',
+    yelow: 'f6e631'
   }
   
   const relativeColors = {
