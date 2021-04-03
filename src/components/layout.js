@@ -1,11 +1,14 @@
 /** @jsx jsx */
 import React from 'react'
-import { jsx, Styled } from "theme-ui"
+import { jsx, Styled, useColorMode } from "theme-ui"
+import { css } from '@emotion/core'
 import { Link } from "gatsby"
 import Logo from './Logo'
 import ThemeToggler from './ThemeToggler'
 
 const Layout = ({ children }) => {
+  const [colorMode, setColorMode] = useColorMode()
+
   return (
     <Styled.root>
       <header
