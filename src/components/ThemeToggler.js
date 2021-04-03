@@ -3,7 +3,7 @@ import { useColorMode } from 'theme-ui'
 import { FiMoon, FiSun } from 'react-icons/fi'
 import { rgba } from 'polished'
 import Button from './Button'
-import colors from '../lib/colors'
+// import colors from '../lib/colors'
 import { grayscale } from 'polished'
 
 const ThemeToggler = () => {
@@ -21,14 +21,14 @@ const ThemeToggler = () => {
         alignItems: 'center',
         justifyContent: 'center',
         margin: 0,
-        // background: rgba(colors.black, 0.05),
-        // color: colors.black,
-        // '@media (hover: hover)': {
-        //   ':hover': {
-        //     color: colors.white,
-        //     background: colors.primary,
-        //   },
-        // },
+        background: rgba('black', 0.05),
+        color: 'black',
+        '@media (hover: hover)': {
+          ':hover': {
+            color: 'white',
+            background: 'primary',
+          },
+        },
       }}
       onClick={(e) => {
         setColorMode(colorMode === 'default' ? 'dark' : 'default')
