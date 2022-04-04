@@ -1,0 +1,132 @@
+---
+title: Como creamos este Blog
+date: "02-04-2022"
+image: 
+imageAlt: 
+---
+
+Después de la conferencia de [Gatsby](https://www.gatsbyjs.com/) 2021 y investigando como desarrollar un blog encontre un curso en [Egghead](https://egghead.io/) realizado por [Laurie Barth](https://twitter.com/laurieontech) de Crear un blog de desarrollador con Gatsby.
+
+Gatsby es un generador de sitios estáticos basado en React y alimentado por GraphQL. Combina las mejores partes de React, Webpack, react-router, GraphQL y otras herramientas de front-end para brindar una excelente experiencia de desarrollador.
+
+Este curso lo lleva desde la inicialización de un sitio de Gatsby a través de CLI hasta la utilización del ecosistema de Gatsby para obtener archivos MDX de su sistema. Después de abordar el sistema de archivos, optimizará para SEO, así como estilos adicionales a través de ThemeUI que admitirán características como el resaltado de sintaxis en fragmentos de código. Finalmente, aprenderá cómo procesar y renderizar imágenes de manera eficiente.
+
+Al final del curso, tendrá un blog de desarrollador en pleno funcionamiento que servirá como base para aplicaciones de grado de producción más grandes.
+
+## Use npm init gatsby para crear un sitio inicial de Gatsby
+
+```Js
+// Crea un sitio Gatsby
+npm init gatsby
+```
+
+El sitio incluye un **package.json** con Gatsby, React e react-dominstalado, un archivo vacío gatsby-config.js y dos archivos en src/pages- index.js y 404.js.
+
+### Para poder ver en forma local el index.js creado se tiene que correr la siguiente linea de comando:
+
+```Js
+// Correr el localhost
+gatsby develop
+
+// link del localhost
+success write out requires - 0.077s
+success run page queries - 1.546s - 2/2 1.29/s
+⠀
+You can now view blog-leurjim in the browser.
+⠀
+  http://localhost:8000/
+⠀
+View GraphiQL, an in-browser IDE, to explore your site's data and schema
+⠀
+  http://localhost:8000/___graphql
+⠀
+Note that the development build is not optimized.
+To create a production build, use gatsby build
+```
+
+Les dejo el link donde pueden conseguir el curso [Cree un blog de desarrollador con Gatsby](https://egghead.io/courses/build-a-developer-blog-with-gatsby-bd96).
+
+## Mi toque personal al Blog
+
+Después de haber desarrolado el blog pude comenzar a hacer modificaciones y darle mi toque personal. Para esto investigue otros blog como el de [Dan Abramov](https://overreacted.io/) y [Joel Hooks](https://joelhooks.com/) ambos instructores de [Egghead](https://egghead.io/).
+
+De los cuales pude adaptar el **ThemeToggler.js**, con el cual pude desarrollar el Modo Nocturno (Dark Mode).
+
+```js
+import React from 'react'
+import { useColorMode } from 'theme-ui'
+import { FiMoon, FiSun } from 'react-icons/fi'
+import { rgba } from 'polished'
+import Button from './Button'
+import colors from '../lib/colors'
+import { grayscale } from 'polished'
+
+const ThemeToggler = () => {
+  const [colorMode, setColorMode] = useColorMode()
+
+  return (
+    <Button
+      id="dark-mode-toggler"
+      css={{
+        borderRadius: '50%',
+        width: '2.375rem',
+        height: '2.375rem',
+        padding: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 0,
+        // background: rgba(colors.black, 0.05),
+        // color: colors.black,
+        // '@media (hover: hover)': {
+        //   ':hover': {
+        //     color: colors.white,
+        //     background: colors.primary,
+        //   },
+        // },
+      }}
+      onClick={(e) => {
+        setColorMode(colorMode === 'default' ? 'dark' : 'default')
+      }}
+    >
+      {colorMode === 'default' ? (
+        <FiMoon 
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0',
+            width: '1.25rem',
+            height: '1.25rem',
+          }} />
+      ) : (
+        <FiSun
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0',
+            width: '1.25rem',
+            height: '1.25rem',
+          }} />
+      )}
+    </Button>
+  )
+}
+
+export default ThemeToggler
+```
+
+Además, de otros consejos como el de tener un Blog minimalista si mucho diseño.
+
+## Despliegue del blog
+
+El blog fue desplegado en [Gatsby Cloud](https://www.gatsbyjs.com/dashboard/signup).
+
+### Conslusiones
+
+Siendo mi primer proyecto realizado en primera instancia a tráves de un curso pude incluir funcionalidades, las cuales me ayudaron a comprender el funcionamiento de Gatsby y sus complementos.
+
+Me tomo horas y días llevar acabo este proyecto, pero el esfuerzo valio la pena, ya que pude poner a la practica lo aprendido e investigado.
+
+Aquí puedes ver el código [GitHub](https://github.com/leurjim/blog-leurjim).

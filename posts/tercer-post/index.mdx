@@ -1,0 +1,170 @@
+---
+title: Página Web Seimetel
+date: "03-04-2022"
+image: './seimetel.png'
+imageAlt: Seimetel
+---
+
+[Seimetel](https://www.seimetelperu.com/) proyecto creado para una empresa de Infraestructura de Telecomunicaciones. El cliente queria darse a conocer a tráves de la Web.
+
+## Como se realizó el proyecto
+
+En este caso el proyecto requeria, además de desarrollar la web, realizar el diseño. Por lo cual, se tuvo que recurrir al curso de [**Design for Developers**](https://frontendmasters.com/courses/design-for-developers/) de [Sarah Drasner](https://frontendmasters.com/teachers/sarah-drasner/) profesora en [Frontend Masters](https://frontendmasters.com/dashboard/). Este curso nos dío el conocimiento y la técnica para realizar la parte estética de la página.
+
+Después de tener el diseño pasamos a la parte del desarrollo. Como es una página informativa se decidio desplegarla en Gatsby. Para esta parte utilizamos los conocimientos adquiridos en el curso de [Introduction to Gatsby, v2](https://frontendmasters.com/courses/gatsby-v2/) de [Jason Lengstorf](https://www.learnwithjason.dev/) profesor en [Frontend Masters](https://frontendmasters.com/dashboard/) y instructor en [Egghead](https://egghead.io/).
+
+```Js
+// Crea un sitio Gatsby
+
+npm init gatsby
+```
+
+```Js
+// src/pages/index.js
+
+import * as React from "react";
+
+export default function IndexPage() {
+  return (
+    <main>
+      <h1>Hola Seimetel!</h1>
+    </main>
+  );
+}
+```
+Guarde este archivo, luego inicie el servidor de desarrollo de Gatsby.
+
+```Js
+gatsby develop
+```
+
+## Optimizar imágenes estáticas
+
+Una de las características más poderosas de Gatsby es su capacidad para procesar imágenes. Esto significa que podemos agregar imágenes en los sitios de Gatsby y se optimizarán automáticamente: marcadores de posición elegantes, imágenes receptivas, carga diferida y más, todo con una configuración mínima.
+
+Para agregar optimización de imagen, debemos agregar el complemento de imagen Gatsby y soporte para Sharp, que es una biblioteca de procesamiento de imágenes de código abierto.
+
+```Js
+npm install gatsby-plugin-image gatsby-plugin-sharp gatsby-transformer-sharp
+```
+
+## Responsive Web
+
+Para el caso de la adaptación de la web a los diferentes tamaños de pantalla utilizamos lo aprendido en el curso [Master Gatsby](https://mastergatsby.com/) de [WesBos](https://wesbos.com/).
+
+```Js
+
+// layout.module.css
+
+.header,
+.footer {
+	background: var(--black);
+	color: var(--white);
+	/* needed for the floated layout */
+	clear: both;
+	padding: 0;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	height: 90px;
+}
+
+.header a {
+	font-size: 1.2rem;
+	color: var(--orange);
+	display: inline-block;
+	border-radius: 5px;
+	padding: 0.5rem;
+	text-decoration: none;
+}
+
+.header a:focus,
+.header a:hover {
+	background: var(--orange);
+	color: var(--white);
+}
+
+.footer {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	font-family: var(--rosario);
+	font-size: 1.2rem;
+	padding: 1rem;
+}
+
+/* navigation */
+nav {
+	font-family: var(--rosario);
+	font-size: 100%;
+	padding: 0.5rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 0;
+	align-items: center;
+	margin-top: 0;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: auto;
+	background-size: 1500px;
+	background-color: var(--white);
+	padding: 5px;
+	padding: clamp(5px, 1vw, 25px);
+	box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.044);
+	border: 5px solid white;
+	@media (max-width: 1100px) {
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.header a {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	nav {
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	nav ul {
+		grid-template-rows: auto auto;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+	}
+}
+
+@media (max-width: 500px) {
+	nav ul {
+		grid-template-rows: auto auto;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+	}
+}
+```
+
+## Despliegue de la página y Formulario
+
+La página fue desplegada a tráves de [Netlify](https://app.netlify.com/). Donde se pudo configurar el formulario creado en la página Contáctenos.
+
+## Conclusiones
+
+Ha sido el primer proyecto integral desde el Diseño hasta el Backend del formulario agregado. La lección aprendida es que mientras estes desarrollando el proyecto es necesario ver como se ve en los diferentes tamaños del pantallas, ya que cuando fue desplegado por primera vez en la web en los dispositivos de pantallas pequeñas se veia realmente mal.
+
+Aquí puedes ver el código [GitHub](https://github.com/leurjim/siemetel).

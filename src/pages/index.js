@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
                 <Link 
                   to={post.slug}
                   sx={{
-                    color: 'inherit',
+                    color: '#d23669',
                     textDecoration: 'none',
                     ':hover,:focus': {
                       color: 'primary',
@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
 {
-  allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
+  allMdx (sort: {fields: [frontmatter___date], order: ASC}) {
     nodes {
       slug
       frontmatter {
