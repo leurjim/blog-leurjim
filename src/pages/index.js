@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
 {
-  allMdx (sort: {fields: [frontmatter___date], order: ASC}) {
+  allMdx (sort: {fields: [frontmatter___date], order: DESC}) {
     nodes {
       slug
       frontmatter {
